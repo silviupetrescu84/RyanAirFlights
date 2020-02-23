@@ -1,0 +1,6 @@
+framework module Pods_RyanAirFlightsTests {
+  umbrella header "Pods-RyanAirFlightsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
