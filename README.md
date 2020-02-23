@@ -28,5 +28,5 @@ Alamofire - https://github.com/Alamofire/Alamofire
 
 The pod was integrated into the project for easier download and to make sure the project is buildable in case Alamofire is getting updated
 
-Other resources used:
+Other resources used:  
 https://github.com/apasccon/SearchTextField for easy searching inside the textfields
