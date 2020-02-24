@@ -54,7 +54,9 @@ class SearchFlightsVC: UIViewController {
                     }
                 }
             } else { //To do create a main view which displays errors in a queue
-                self.showAlert(message: error?.localizedDescription)
+                DispatchQueue.main.async {
+                    self.showAlert(message: error?.localizedDescription)
+                }
             }
             DispatchQueue.main.async {
                 self.endLoadingStations()

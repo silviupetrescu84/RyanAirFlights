@@ -11,6 +11,8 @@
 		1215ED9B2402FFBD00FDEDA9 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED9A2402FFBD00FDEDA9 /* SearchTextField.swift */; };
 		1215ED9D24030F5B00FDEDA9 /* ShowFlightsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED9C24030F5B00FDEDA9 /* ShowFlightsVC.swift */; };
 		1215EDA02403142500FDEDA9 /* FlightDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED9F2403142500FDEDA9 /* FlightDisplayCell.swift */; };
+		1215EDA32403B64A00FDEDA9 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDA12403B64900FDEDA9 /* MockAPIService.swift */; };
+		1215EDA42403B64A00FDEDA9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDA22403B64A00FDEDA9 /* APIService.swift */; };
 		12D71DCE2402DB3B005292EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71DCD2402DB3B005292EC /* AppDelegate.swift */; };
 		12D71DD52402DB3B005292EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D71DD32402DB3B005292EC /* Main.storyboard */; };
 		12D71DD82402DB3B005292EC /* RyanAirFlights.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12D71DD62402DB3B005292EC /* RyanAirFlights.xcdatamodeld */; };
@@ -21,13 +23,11 @@
 		12D71E092402DD31005292EC /* SearchFlightsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71E072402DD31005292EC /* SearchFlightsVC.swift */; };
 		12D71E0A2402DD31005292EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71E082402DD31005292EC /* SceneDelegate.swift */; };
 		12D71E112402DDD1005292EC /* NSURLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71E102402DDD1005292EC /* NSURLService.swift */; };
-		12D71E132402DEBA005292EC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71E122402DEBA005292EC /* APIService.swift */; };
 		12D71E162402E093005292EC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71E152402E093005292EC /* Station.swift */; };
 		12D71E182402E50D005292EC /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71E172402E50D005292EC /* Flight.swift */; };
 		12D71E1E2402E6B7005292EC /* ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71E1D2402E6B6005292EC /* ISO8601.swift */; };
 		12D71E202402EEB2005292EC /* AlamoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71E1F2402EEB2005292EC /* AlamoService.swift */; };
 		12D71E222402EF00005292EC /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71E212402EF00005292EC /* CloudService.swift */; };
-		12D71E242402F061005292EC /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71E232402F061005292EC /* MockAPIService.swift */; };
 		12D71E292402F127005292EC /* MockStations.json in Resources */ = {isa = PBXBuildFile; fileRef = 12D71E282402F127005292EC /* MockStations.json */; };
 		14EBC0B3ADCB12996B66EE5A /* Pods_RyanAirFlights.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95DECA860407A86A2081599F /* Pods_RyanAirFlights.framework */; };
 		21737FB75358532440396C16 /* Pods_RyanAirFlights_RyanAirFlightsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415E47F69BEF65C7A5C1B59A /* Pods_RyanAirFlights_RyanAirFlightsUITests.framework */; };
@@ -57,6 +57,8 @@
 		1215ED9A2402FFBD00FDEDA9 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		1215ED9C24030F5B00FDEDA9 /* ShowFlightsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFlightsVC.swift; sourceTree = "<group>"; };
 		1215ED9F2403142500FDEDA9 /* FlightDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDisplayCell.swift; sourceTree = "<group>"; };
+		1215EDA12403B64900FDEDA9 /* MockAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
+		1215EDA22403B64A00FDEDA9 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		12D71DCA2402DB3B005292EC /* RyanAirFlights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanAirFlights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D71DCD2402DB3B005292EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12D71DD42402DB3B005292EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,13 +75,11 @@
 		12D71E072402DD31005292EC /* SearchFlightsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFlightsVC.swift; sourceTree = "<group>"; };
 		12D71E082402DD31005292EC /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		12D71E102402DDD1005292EC /* NSURLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSURLService.swift; sourceTree = "<group>"; };
-		12D71E122402DEBA005292EC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		12D71E152402E093005292EC /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		12D71E172402E50D005292EC /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		12D71E1D2402E6B6005292EC /* ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601.swift; sourceTree = "<group>"; };
 		12D71E1F2402EEB2005292EC /* AlamoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoService.swift; sourceTree = "<group>"; };
 		12D71E212402EF00005292EC /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
-		12D71E232402F061005292EC /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
 		12D71E282402F127005292EC /* MockStations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockStations.json; sourceTree = "<group>"; };
 		415E47F69BEF65C7A5C1B59A /* Pods_RyanAirFlights_RyanAirFlightsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirFlights_RyanAirFlightsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AB3A65AC7ADAF4E48FF897 /* Pods-RyanAirFlightsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirFlightsTests.release.xcconfig"; path = "Target Support Files/Pods-RyanAirFlightsTests/Pods-RyanAirFlightsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +226,8 @@
 		12D71E0E2402DD7A005292EC /* API Requests */ = {
 			isa = PBXGroup;
 			children = (
+				1215EDA22403B64A00FDEDA9 /* APIService.swift */,
+				1215EDA12403B64900FDEDA9 /* MockAPIService.swift */,
 			);
 			path = "API Requests";
 			sourceTree = "<group>";
@@ -236,8 +238,6 @@
 				12D71E212402EF00005292EC /* CloudService.swift */,
 				12D71E102402DDD1005292EC /* NSURLService.swift */,
 				12D71E1F2402EEB2005292EC /* AlamoService.swift */,
-				12D71E122402DEBA005292EC /* APIService.swift */,
-				12D71E232402F061005292EC /* MockAPIService.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -538,15 +538,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12D71E242402F061005292EC /* MockAPIService.swift in Sources */,
 				12D71E092402DD31005292EC /* SearchFlightsVC.swift in Sources */,
 				12D71DCE2402DB3B005292EC /* AppDelegate.swift in Sources */,
 				12D71E112402DDD1005292EC /* NSURLService.swift in Sources */,
 				1215ED992402FBBD00FDEDA9 /* GlobalData.swift in Sources */,
 				1215ED9B2402FFBD00FDEDA9 /* SearchTextField.swift in Sources */,
 				1215EDA02403142500FDEDA9 /* FlightDisplayCell.swift in Sources */,
+				1215EDA42403B64A00FDEDA9 /* APIService.swift in Sources */,
+				1215EDA32403B64A00FDEDA9 /* MockAPIService.swift in Sources */,
 				12D71DD82402DB3B005292EC /* RyanAirFlights.xcdatamodeld in Sources */,
-				12D71E132402DEBA005292EC /* APIService.swift in Sources */,
 				12D71E1E2402E6B7005292EC /* ISO8601.swift in Sources */,
 				12D71E182402E50D005292EC /* Flight.swift in Sources */,
 				1215ED9D24030F5B00FDEDA9 /* ShowFlightsVC.swift in Sources */,

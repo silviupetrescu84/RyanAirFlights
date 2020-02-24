@@ -25,7 +25,7 @@ class NSURLService : CloudService {
     }
     
     func send(request: URLRequest, completion: @escaping (Error?, Any?) -> Void) -> Void {
-        NSURLService.session.dataTask(with: request) { (data, response, error) in
+        let task = NSURLService.session.dataTask(with: request) { (data, response, error) in
             if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode < 200 || httpResponse.statusCode > 399 {
                     let serverMsg        = HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)
@@ -37,15 +37,10 @@ class NSURLService : CloudService {
                     return
                 }
             }
-            
-            var responseObject: Any?    = nil
-            
-            if data != nil && data!.count > 0 {
-                responseObject    = try? JSONSerialization.jsonObject(with: data!, options: [.mutableContainers])
-            }
-            
-            completion(error, responseObject)
+                        
+            completion(error, data)
         }
+        task.resume()
     }
     
     func get(endpoint: String, parameters: [String:Any] = [:], completion: @escaping (Error?, Any?) -> Void) -> Void {
