@@ -214,12 +214,12 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="7ux-pc-13i">
                                 <rect key="frame" x="177.5" y="345.5" width="20" height="20"/>
                             </activityIndicatorView>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mBw-lx-2Tl">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="mBw-lx-2Tl">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="flightDisplayCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rMj-6M-Zk5" customClass="FlightDisplayCell" customModule="RyanAirFlights" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="16.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="flightDisplayCell" id="rMj-6M-Zk5" customClass="FlightDisplayCell" customModule="RyanAirFlights" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="16.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rMj-6M-Zk5" id="kom-s0-f0D">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="16.5"/>

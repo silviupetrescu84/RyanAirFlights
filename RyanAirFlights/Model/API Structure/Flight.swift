@@ -9,11 +9,14 @@
 import Foundation
 
 struct Fare: Codable {
-    var ammount: Double?
+    var amount: Double?
     var count: Int?
     var type: String?
     var hasDiscount: Bool?
     var publishedFare: Double?
+    var discountInPercent: Int?
+    var hasPromoDiscount: Bool?
+    var discountAmount: Double?
 }
 
 class MainFare: Codable {
@@ -25,19 +28,20 @@ class MainFare: Codable {
 class RegularFare: MainFare {
     
     var faresLeft: Int?
-    var timeUTC: [String]? {
-        didSet {
-            guard timeUTC != nil else { return }
-            timeUTCDate = [Date]()
-            
-            for item in timeUTC! {
-                if let itemDate = item.iso8601 {
-                    timeUTCDate?.append(itemDate)
+    var timeUTC: [String]?
+    var timeUTCDate: [Date]? {
+        get {
+            var items = [Date]()
+            if timeUTC != nil {
+                for item in timeUTC! {
+                    if let itemDate = item.shortISO8601 {
+                        items.append(itemDate)
+                    }
                 }
             }
+            return items
         }
     }
-    var timeUTCDate: [Date]?
     var duration: String?
     var flightNumber: String?
     var infantsLeft: Int?
@@ -46,29 +50,26 @@ class RegularFare: MainFare {
 }
 
 struct Flight: Codable {
-    var time : [String]? {
-        didSet {
-            guard time != nil else { return }
-            timeDate = [Date]()
-            
-            for item in time! {
-                if let itemDate = item.iso8601 {
-                    timeDate?.append(itemDate)
+    var time : [String]?
+    var timeDate : [Date]? {
+        get {
+            var items = [Date]()
+            if time != nil {
+                for item in time! {
+                    items.append(item.shortISO8601!)
                 }
             }
+            return items
         }
     }
-    var timeDate : [Date]?
     var regularFare: RegularFare?
     
 }
 struct FlightDate: Codable {
-    var dateOut: String? {
-        didSet {
-            dateOutDate = dateOut?.iso8601
-        }
+    var dateOut: String?
+    var dateOutDate: Date? {
+        get { return dateOut?.shortISO8601 }
     }
-    var dateOutDate: Date?
     var flights: [Flight]?
 }
 
@@ -80,12 +81,10 @@ struct Trip: Codable {
 
 struct FlightResponse: Codable {
     var currency: String?
-    var serverTimeUTC: String? {
-        didSet {
-            serverTimeUTCDate = serverTimeUTC?.iso8601
-        }
+    var serverTimeUTC: String?
+    var serverTimeUTCDate: Date? {
+        get { return serverTimeUTC?.shortISO8601 }
     }
-    var serverTimeUTCDate: Date?
     var currPrecision: Int?
     var trips: [Trip]?
     

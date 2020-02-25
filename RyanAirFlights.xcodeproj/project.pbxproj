@@ -13,6 +13,7 @@
 		1215EDA02403142500FDEDA9 /* FlightDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED9F2403142500FDEDA9 /* FlightDisplayCell.swift */; };
 		1215EDA32403B64A00FDEDA9 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDA12403B64900FDEDA9 /* MockAPIService.swift */; };
 		1215EDA42403B64A00FDEDA9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDA22403B64A00FDEDA9 /* APIService.swift */; };
+		1215EDA62405D6A500FDEDA9 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDA52405D6A400FDEDA9 /* PaddedLabel.swift */; };
 		12D71DCE2402DB3B005292EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D71DCD2402DB3B005292EC /* AppDelegate.swift */; };
 		12D71DD52402DB3B005292EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D71DD32402DB3B005292EC /* Main.storyboard */; };
 		12D71DD82402DB3B005292EC /* RyanAirFlights.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12D71DD62402DB3B005292EC /* RyanAirFlights.xcdatamodeld */; };
@@ -59,6 +60,7 @@
 		1215ED9F2403142500FDEDA9 /* FlightDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDisplayCell.swift; sourceTree = "<group>"; };
 		1215EDA12403B64900FDEDA9 /* MockAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
 		1215EDA22403B64A00FDEDA9 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1215EDA52405D6A400FDEDA9 /* PaddedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
 		12D71DCA2402DB3B005292EC /* RyanAirFlights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanAirFlights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D71DCD2402DB3B005292EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12D71DD42402DB3B005292EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		12D71E192402E622005292EC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1215EDA52405D6A400FDEDA9 /* PaddedLabel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				12D71E182402E50D005292EC /* Flight.swift in Sources */,
 				1215ED9D24030F5B00FDEDA9 /* ShowFlightsVC.swift in Sources */,
 				12D71E0A2402DD31005292EC /* SceneDelegate.swift in Sources */,
+				1215EDA62405D6A500FDEDA9 /* PaddedLabel.swift in Sources */,
 				12D71E202402EEB2005292EC /* AlamoService.swift in Sources */,
 				12D71E162402E093005292EC /* Station.swift in Sources */,
 				12D71E222402EF00005292EC /* CloudService.swift in Sources */,
@@ -729,6 +733,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TVKNW9DMXY;
+				IBSC_ERRORS = NO;
+				IBSC_NOTICES = NO;
+				IBSC_WARNINGS = NO;
 				INFOPLIST_FILE = RyanAirFlights/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -748,6 +755,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TVKNW9DMXY;
+				IBSC_ERRORS = NO;
+				IBSC_NOTICES = NO;
+				IBSC_WARNINGS = NO;
 				INFOPLIST_FILE = RyanAirFlights/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

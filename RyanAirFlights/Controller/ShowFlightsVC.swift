@@ -40,6 +40,7 @@ class ShowFlightsVC : UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func endLoadingStations() {
         activityIndicator.stopAnimating()
+        tableView.isHidden = false
         tableView.reloadData()
     }
     
@@ -60,10 +61,18 @@ class ShowFlightsVC : UIViewController, UITableViewDelegate, UITableViewDataSour
         return 0
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if let trips = flightResponse?.trips {
             if let trip = trips[0] as Trip? {
-                return dateFormatter.string(from: trip.dates![section].dateOutDate!)
+                return "Date: " + dateFormatter.string(from: trip.dates![section].dateOutDate!)
             }
         }
         return ""
@@ -73,7 +82,7 @@ class ShowFlightsVC : UIViewController, UITableViewDelegate, UITableViewDataSour
         cell = tableView.dequeueReusableCell(withIdentifier: "flightDisplayCell", for: indexPath) as? FlightDisplayCell
         if let trips = flightResponse?.trips {
             if let trip = trips[0] as Trip? {
-                cell.setupWith(flightDates: trip.dates![indexPath.section].flights!)
+                cell.setupWith(flightDates: trip.dates![indexPath.section].flights!, currency: flightResponse?.currency ?? "")
             }
         }
         return cell

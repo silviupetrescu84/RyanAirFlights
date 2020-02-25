@@ -139,7 +139,7 @@ class SearchFlightsVC: UIViewController {
         if let departureStation = GlobalData.shared.stations.getStation(string: departureStation.text ?? "") {
             parameters["origin"] = departureStation.code ?? ""
         }
-        if let destinationStation = GlobalData.shared.stations.getStation(string: departureStation.text ?? "") {
+        if let destinationStation = GlobalData.shared.stations.getStation(string: destinationStation.text ?? "") {
             parameters["destination"] = destinationStation.code ?? ""
         }
         parameters["dateout"] = departureDate.text ?? ""
@@ -151,7 +151,7 @@ class SearchFlightsVC: UIViewController {
         parameters["teen"] = teenLabel.text ?? "0"
         parameters["chd"] = childrenLabel.text ?? "0"
         parameters["roundtrip"] = "false" //Should have a field on UI
-        
+        parameters["ToUs"] = "AGREED"
         return parameters
     }
     
